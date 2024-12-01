@@ -76,7 +76,7 @@ ROUTER.put('/users/:id', (req, res) => {
         return res.status(400).json({ message: 'Name and age are required' });
     }
 
-    const USER = users.find((user) => user.id === parseInt(id));
+    const USER = users.find((user) => user.id === parseInt(ID));
 
     if (!USER) {
         return res.status(404).json({ message: 'User not found' });
